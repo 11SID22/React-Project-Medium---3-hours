@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import classes from './ShoesSeller.module.css';
+import Card from '../UI/Card';
 
 const ShoesSeller = (props) => {
     const [enteredName, setEnteredName] = useState('');
@@ -8,6 +9,7 @@ const ShoesSeller = (props) => {
     const [enteredQuantityL, setEnteredQuantityL] = useState('');
     const [enteredQuantityM, setEnteredQuantityM] = useState('');
     const [enteredQuantityS, setEnteredQuantityS] = useState('');
+    const [formIsValid, setFormIsValid] = useState(true);
 
     const nameChangeHandler = (event) => {
         setEnteredName(event.target.value)
@@ -31,6 +33,19 @@ const ShoesSeller = (props) => {
 
     const submitHandler = (event) => {
         event.preventDefault();
+
+        if (
+            enteredName.trim() === '' ||
+            enteredDesc.trim() === '' ||
+            enteredPrice.trim() === '' ||
+            enteredQuantityL.trim() === '' ||
+            enteredQuantityM.trim() === '' ||
+            enteredQuantityS.trim() === ''
+        ) {
+            setFormIsValid(false);
+            return ;
+        }  
+        
         const newShoe = {
             name: enteredName,
             description: enteredDesc,
@@ -50,46 +65,48 @@ const ShoesSeller = (props) => {
     };
 
     return (
-        <form className={classes.form} onSubmit={submitHandler}>
-            <label htmlFor="name">Shoe Name:</label>
-            <input
-                type="text"
-                id="name"
-                value={enteredName}
-                onChange={nameChangeHandler} />
-            <label htmlFor="desc">Description:</label>
-            <input
-                type="text"
-                id="desc"
-                value={enteredDesc}
-                onChange={descChangeHandler} />
-            <label htmlFor="price">Price:</label>
-            <input
-                type="number"
-                id="price"
-                value={enteredPrice}
-                onChange={priceChangeHandler} />
-            <h3>Quantity Available</h3>
-            <label htmlFor="L">L:</label>
-            <input
-                type="number"
-                id="L"
-                value={enteredQuantityL}
-                onChange={quantityLChangeHandler} />
-            <label htmlFor="M">M:</label>
-            <input
-                type="number"
-                id="M"
-                value={enteredQuantityM}
-                onChange={quantityMChangeHandler} />
-            <label htmlFor="S">S:</label>
-            <input
-                type="number"
-                id="S"
-                value={enteredQuantityS}
-                onChange={quantitySChangeHandler} />
-            <button type="submit">Add Product</button>
-        </form>
+        <Card>
+            <form className={classes.form} onSubmit={submitHandler}>
+                <label htmlFor="name">Shoe Name:</label>
+                <input
+                    type="text"
+                    id="name"
+                    value={enteredName}
+                    onChange={nameChangeHandler} />
+                <label htmlFor="desc">Description:</label>
+                <input
+                    type="text"
+                    id="desc"
+                    value={enteredDesc}
+                    onChange={descChangeHandler} />
+                <label htmlFor="price">Price:</label>
+                <input
+                    type="number"
+                    id="price"
+                    value={enteredPrice}
+                    onChange={priceChangeHandler} />
+                <h3>Quantity Available</h3>
+                <label htmlFor="L">L:</label>
+                <input
+                    type="number"
+                    id="L"
+                    value={enteredQuantityL}
+                    onChange={quantityLChangeHandler} />
+                <label htmlFor="M">M:</label>
+                <input
+                    type="number"
+                    id="M"
+                    value={enteredQuantityM}
+                    onChange={quantityMChangeHandler} />
+                <label htmlFor="S">S:</label>
+                <input
+                    type="number"
+                    id="S"
+                    value={enteredQuantityS}
+                    onChange={quantitySChangeHandler} />
+                <button type="submit">Add Product</button>
+            </form>
+        </Card>
     );
 };
 

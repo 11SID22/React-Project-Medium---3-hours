@@ -1,0 +1,51 @@
+/* Styles for the ShoesBuyer list */
+list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 20px; /* Add spacing between elements */
+}
+
+/* Styling the list itself */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styling each list item */
+li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/* Styling for the text inside each list item */
+li span {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Price styling */
+li .price {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Quantity styling */
+li .quantity {
+    font-style: italic;
+    color: #888;
+}
+

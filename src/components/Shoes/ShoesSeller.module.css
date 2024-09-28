@@ -54,3 +54,18 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+/* ShoesSeller.module.css */
+
+/* Styles for invalid input fields */
+.invalid {
+    border: 2px solid red;
+    background-color: #fdd;
+}
+
+/* Error message styling */
+.errorText {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
