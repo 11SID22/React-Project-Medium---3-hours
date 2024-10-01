@@ -44,8 +44,39 @@ li .price {
 }
 
 /* Quantity styling */
-li .quantity {
+li .size {
     font-style: italic;
     color: #888;
 }
 
+.quantityInput {
+    width: 60px;
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .quantityInput:focus {
+    outline: none;
+    border-color: #007bff; /* Border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Focus shadow effect */
+  }
+  
+  /* Show default number input spinner arrows */
+  .quantityInput::-webkit-inner-spin-button,
+  .quantityInput::-webkit-outer-spin-button {
+    -webkit-appearance: auto; /* Allow the arrows to show */
+  }
+  
+  .quantityInput[type='number'] {
+    -moz-appearance: auto; /* Allow the arrows to show in Firefox */
+  }
+  
+  /* Optional hover effect */
+  .quantityInput:hover {
+    border-color: #888;
+  }
+  

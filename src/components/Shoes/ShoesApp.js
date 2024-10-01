@@ -9,14 +9,14 @@ const ShoesApp = () => {
             name: 'Nike',
             description: '100% cotton',
             price: '1000',
-            quantity: '15'
+            size: ['L:1, M:7, S:20'],
         },
         {
             id: 'b1',
             name: 'Adidas',
             description: '100% leather',
             price: '5000',
-            quantity: '25'
+            size: ['L:19, M:70, S:34']
         }
     ]);
 

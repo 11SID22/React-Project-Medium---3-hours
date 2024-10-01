@@ -50,7 +50,7 @@ const ShoesSeller = (props) => {
             name: enteredName,
             description: enteredDesc,
             price: enteredPrice,
-            quantity: `L:${enteredQuantityL}, M:${enteredQuantityM}, S:${enteredQuantityS}`
+            size: `L:${enteredQuantityL}, M:${enteredQuantityM}, S:${enteredQuantityS}`
         };
         console.log(newShoe)
         props.onAddShoe(newShoe); // Pass the new shoe to the parent component
@@ -104,8 +104,9 @@ const ShoesSeller = (props) => {
                     id="S"
                     value={enteredQuantityS}
                     onChange={quantitySChangeHandler} />
-                <button type="submit">Add Product</button>
+                <button type="submit" className={classes.shoeFormButton}>Add Product</button>
             </form>
+                  
         </Card>
     );
 };
