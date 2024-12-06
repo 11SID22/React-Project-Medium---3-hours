@@ -7,14 +7,14 @@ const ShoesApp = () => {
         {
             id: 'a1',
             name: 'Nike',
-            description: '100% cotton',
+            description: 'Just Do It',
             price: '1000',
             size: ['L:1, M:7, S:20'],
         },
         {
             id: 'b1',
             name: 'Adidas',
-            description: '100% leather',
+            description: 'Impossible is Nothing',
             price: '5000',
             size: ['L:19, M:70, S:34']
         }

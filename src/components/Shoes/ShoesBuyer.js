@@ -44,9 +44,9 @@ const ShoesBuyer = (props) => {
                     step='1'
                     className={classes.quantityInput}
                 />
-                <button onClick={() => addToCart(item, 'L')}>Add L</button>
-                <button onClick={() => addToCart(item, 'M')}>Add M</button>
-                <button onClick={() => addToCart(item, 'S')}>Add S</button>
+                <button className={classes.addButton} onClick={() => addToCart(item, 'L')}>Add L</button>
+                <button className={classes.addButton} onClick={() => addToCart(item, 'M')}>Add M</button>
+                <button className={classes.addButton} onClick={() => addToCart(item, 'S')}>Add S</button>
             </div>
         </li>
     ));
